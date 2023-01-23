@@ -40,12 +40,13 @@ header {
     url("../images/image-hero-mobile.jpg");
   background-size: 100% 128px, 100% 100%;
   background-repeat: no-repeat, no-repeat;
-  background-position: top, center;
+  background-position: top, top;
   padding: 2rem 1.5rem 0 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 19rem;
+  gap: 2.3rem;
+  height: 40%;
 }
 
 nav {
@@ -62,6 +63,11 @@ nav button {
   display: flex;
   background-image: url("../images/icon-hamburger.svg");
   background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.close-menu {
+  background-image: url("../images/icon-close-menu.svg");
 }
 
 ul {
@@ -70,7 +76,7 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.0497193);
   border-radius: 8px;
   z-index: 3;
-  opacity:0;
+  opacity: 0;
   transition: all 0.5s;
 }
 
@@ -87,4 +93,71 @@ li {
 
 li:last-of-type {
   border-bottom: none;
+}
+
+main {
+  padding: 1.5rem;
+  background: #fafafa;
+}
+
+.title-container {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: -5rem;
+  padding: 0 1.5rem 2.5rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.title-container img {
+  width: 56px;
+  height: 56px;
+}
+
+.title-container > img {
+  margin-top: -1.8rem;
+}
+
+.title-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+.title-container p {
+  color: #7a7a7a;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.title-buttons-container {
+  display:flex;
+  justify-content: center;
+  gap:0.5rem;
+  width:100%;
+}
+
+.back-project-button {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Commissioner", sans-serif;
+  background: #3cb3ab;
+  border-radius: 33.5px;
+  border:none;
+  padding:1.1rem 2.6rem;
+}
+
+.bookmark-button {
+  border:none;
+  background: none;
 }
