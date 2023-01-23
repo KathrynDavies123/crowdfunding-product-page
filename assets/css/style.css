@@ -17,6 +17,7 @@ html {
   top: 0;
   left: 0;
   mix-blend-mode: normal;
+  opacity: 0;
   transition: all 0.5s;
 }
 
@@ -51,6 +52,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 }
 
 nav button {
@@ -68,6 +70,12 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.0497193);
   border-radius: 8px;
   z-index: 3;
+  opacity:0;
+  transition: all 0.5s;
+}
+
+.nav-open {
+  opacity: 1;
 }
 
 li {

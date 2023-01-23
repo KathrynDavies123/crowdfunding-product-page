@@ -3,5 +3,6 @@ let navlist = document.querySelector(".navigation");
 let backgroundcolor = document.querySelector(".background-color");
 
 menubutton.addEventListener("click", function () {
-    console.log("test");
+    backgroundcolor.classList.toggle("background-gradient");
+    navlist.classList.toggle("nav-open");
 })
