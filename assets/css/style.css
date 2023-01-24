@@ -19,16 +19,19 @@ html {
   mix-blend-mode: normal;
   opacity: 0;
   transition: all 0.5s;
+  z-index: 1;
 }
 
 .background-overlay {
   background: #000000;
   opacity: 0.5;
+  z-index: 2;
 }
 
 .background-gradient {
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
   opacity: 0.6;
+  z-index: 2;
 }
 
 header {
@@ -98,9 +101,12 @@ li:last-of-type {
 main {
   padding: 1.5rem;
   background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.title-container {
+main > div {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.0497193);
   border-radius: 8px;
@@ -108,8 +114,12 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 2rem 1.5rem 2.5rem 1.5rem;
+}
+
+.title-container {
+  padding-top: 0;
   margin-top: -5rem;
-  padding: 0 1.5rem 2.5rem 1.5rem;
   gap: 1.5rem;
 }
 
@@ -139,10 +149,10 @@ h1 {
 }
 
 .title-buttons-container {
-  display:flex;
+  display: flex;
   justify-content: center;
-  gap:0.5rem;
-  width:100%;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .back-project-button {
@@ -153,11 +163,141 @@ h1 {
   font-family: "Commissioner", sans-serif;
   background: #3cb3ab;
   border-radius: 33.5px;
-  border:none;
-  padding:1.1rem 2.6rem;
+  border: none;
+  padding: 1.1rem 2.6rem;
 }
 
 .bookmark-button {
-  border:none;
+  border: none;
   background: none;
+  z-index: 2;
+}
+
+.stats-container {
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.stats-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-text div {
+  padding: 1.5rem;
+}
+
+hr {
+  width: 5rem;
+  color: #000000;
+  opacity: 0.2;
+}
+
+.stats-large {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.stats-small {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.progress-bar-total {
+  height: 0.8rem;
+  width: 100%;
+  background: rgba(47, 47, 47, 0.05);
+  mix-blend-mode: normal;
+  border-radius: 33.5px;
+}
+
+.progress-bar-completed {
+  background: #3cb3ab;
+  height: 0.8rem;
+  border-radius: 33.5px;
+}
+
+.product-info-container {
+  gap: 1.5rem;
+  padding: 2rem 1.2rem 2.5rem 1.2rem;
+  text-align: left;
+}
+
+.about-text {
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+.about-text p {
+  margin: 1.5rem 0 0.7rem 0;
+  font-size: 0.9rem;
+  line-height: 24px;
+  color: #7a7a7a;
+}
+
+.product-info {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.out-of-stock {
+  opacity: 0.5;
+}
+
+h3 {
+  font-size: 0.9rem;
+}
+
+.pledge-amount {
+  color: #3cb3ab;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.product-info-text {
+  font-size: 0.9rem;
+  line-height: 24px;
+  color: #7a7a7a;
+  margin: 1.5rem 0;
+}
+
+.number-remaining-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.left {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+}
+
+.number-remaining {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.select-reward {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  background: #3cb3ab;
+  border-radius: 33.5px;
+  padding: 1.1rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.select-reward:disabled {
+  background: #2f2f2f;
+  mix-blend-mode: normal;
+  opacity: 0.5;
 }
