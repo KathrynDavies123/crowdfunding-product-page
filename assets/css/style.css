@@ -10,6 +10,76 @@ html {
   font-family: "Commissioner", sans-serif;
 }
 
+.modal {
+  position: absolute;
+  z-index: 4;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+  margin: 121px 24px;
+  padding: 32px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+}
+
+.close-modal-button {
+  background-image: url("../images/icon-close-modal.svg");
+  height: 14px;
+  width: 14px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 24px;
+  top: 32px;
+}
+
+.modal > p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  line-height: 24px;
+}
+
+.modal .product-info {
+  padding:2rem 0.9rem 2rem 1.4rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  color: currentColor;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+label {
+  font-weight:700;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-left:1rem;
+}
+
+.no-reward-radio { 
+  transform: translateY(0.4rem);
+}
+
+.bamboo-radio {
+  transform: translateY(-0.3rem);
+}
+
+.modal div label + p {
+  margin-top:2rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  line-height: 24px;
+}
+
 .background-color {
   height: 100vh;
   width: 100vw;
@@ -18,8 +88,8 @@ html {
   left: 0;
   mix-blend-mode: normal;
   opacity: 0;
-  transition: all 0.5s;
   z-index: 1;
+  transition: all 0.75s ease;
 }
 
 .background-overlay {
@@ -144,7 +214,7 @@ h1 {
 
 .title-container p {
   color: #7a7a7a;
-  font-size: 14px;
+  font-size: 0.9rem;
   line-height: 24px;
 }
 
