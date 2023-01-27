@@ -50,6 +50,8 @@ outputStats = () => {
   totalbackeresoutput.innerText = `${totalbackers.toLocaleString()}`;
   progressbar.style.width = `${amountbackedpercentage}%`;
 
+  //make this more efficient by using childnodes ?
+
   numberremainingbamboooutput.forEach((item) => {
     item.innerText = `${numberremainingbamboo}`;
     if (numberremainingbamboo == 0) {
