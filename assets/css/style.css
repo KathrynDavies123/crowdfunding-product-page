@@ -44,11 +44,10 @@ button {
   animation-duration: 0.5s;
 }
 
-.modal > div:first-of-type {
+.modal-default {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  display: none;
 }
 
 .close-modal-button {
@@ -68,6 +67,7 @@ button {
   gap: 1.5rem;
   align-items: center;
   text-align: center;
+  display:none;
 }
 
 .thank-you-message img {
@@ -145,6 +145,10 @@ label {
   font-size: 0.9rem;
   display: inline-block;
   margin-left: 4rem;
+}
+
+span {
+  display: block;
 }
 
 .reward-radio + label {
