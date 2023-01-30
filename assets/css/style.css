@@ -38,13 +38,17 @@ button {
   margin: 0 6%;
   width: 88%;
   padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
   display: none;
   z-index: 5;
   animation-name: fadein;
   animation-duration: 0.5s;
+}
+
+.modal > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  display: none;
 }
 
 .close-modal-button {
@@ -58,10 +62,34 @@ button {
   top: 32px;
 }
 
+.thank-you-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you-message img {
+  height: 64px;
+  width: 64px;
+}
+
+.thank-you-message button {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: #3cb3ab;
+  border-radius: 33.5px;
+  border:none;
+  padding:1rem 2rem;
+}
+
 .product-info-modal {
   border: 2px solid rgba(0, 0, 0, 0.15);
   border-radius: 8px;
-  padding-top:0.5rem;
+  padding-top: 0.5rem;
 }
 
 .product-selected {
@@ -138,8 +166,8 @@ label {
   align-items: center;
   gap: 1.1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  padding:1.4rem 1rem;
-  display:none;
+  padding: 1.4rem 1rem;
+  display: none;
 }
 
 .pledge-input-container label {

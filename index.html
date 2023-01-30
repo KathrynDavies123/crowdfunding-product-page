@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="modal">
+      <div>
       <h2>Back this project</h2>
       <button type="button" class="close-modal-button"></button>
       <p class="description-text">
@@ -45,12 +46,13 @@
           </div>
         </div>
       </div>
-      <div class="product-info-modal bamboo">
+      <div class="product-info-modal">
         <input
           type="radio"
           name="reward-radio"
           id="bamboo-radio"
           class="reward-radio"
+          value="bamboo"
         />
         <label for="bamboo-radio">
           <h3>Bamboo Stand</h3>
@@ -69,16 +71,17 @@
           <label for="pledge-input-bamboo">Enter your pledge</label>
           <div>
             <input type="number" id="pledge-input-bamboo" class="pledge-input">
-            <button type="button" class="continue-button">Continue</button>
+            <button type="button" class="continue-button" value="bamboo">Continue</button>
           </div>
         </div>
       </div>
-      <div class="product-info-modal black">
+      <div class="product-info-modal">
         <input
           type="radio"
           name="reward-radio"
           id="black-radio"
           class="reward-radio"
+          value="black"
         />
         <label for="black-radio">
           <h3>Black Edition Stand</h3>
@@ -96,16 +99,17 @@
           <label for="pledge-input-black">Enter your pledge</label>
           <div>
             <input type="number" id="pledge-input-black" class="pledge-input">
-            <button type="button" class="continue-button">Continue</button>
+            <button type="button" class="continue-button" value="black">Continue</button>
           </div>
         </div>
       </div>
-      <div class="product-info-modal mahogany">
+      <div class="product-info-modal">
         <input
           type="radio"
           name="reward-radio"
           id="mahogany-radio"
           class="reward-radio"
+          value="mahogany"
         />
         <label for="mahogany-radio">
           <h3>Mahogany Special Edition</h3>
@@ -124,11 +128,18 @@
           <label for="pledge-input-mahogany">Enter your pledge</label>
           <div>
             <input type="number" id="pledge-input-mahogany" class="pledge-input">
-            <button type="button" class="continue-button">Continue</button>
+            <button type="button" class="continue-button" value="mahogany">Continue</button>
           </div>
         </div>
       </div>
     </div>
+    <div class="thank-you-message">
+      <img src="./assets/images/icon-check.svg" alt="checkmark">
+      <h2>Thanks for your support!</h2>
+      <p class="description-text">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
+      <button type="button">Got it!</button>
+    </div>
+  </div>
     <div class="background-color"></div>
     <header>
       <nav class="nav-bar">
@@ -155,7 +166,7 @@
           </p>
         </div>
         <div class="title-buttons-container">
-          <button type="button" class="back-project-button open-modal-button">
+          <button type="button" class="open-modal back-project-button">
             Back this project
           </button>
           <button type="button" class="bookmark-button">
@@ -200,7 +211,7 @@
             USB sticks to be stored under the stand.
           </p>
         </div>
-        <div class="product-info bamboo">
+        <div class="product-info">
           <h3>Bamboo Stand</h3>
           <p class="pledge-amount">Pledge $25 or more</p>
           <p class="description-text">
@@ -214,12 +225,13 @@
           </div>
           <button
             type="button"
-            class="select-reward bamboo-button open-modal-button"
+            class="open-modal select-reward"
+            value="bamboo"
           >
             Select Reward
           </button>
         </div>
-        <div class="product-info black">
+        <div class="product-info">
           <h3>Black Edition Stand</h3>
           <p class="pledge-amount">Pledge $75 or more</p>
           <p class="description-text">
@@ -233,12 +245,13 @@
           </div>
           <button
             type="button"
-            class="select-reward black-button open-modal-button"
+            class="open-modal select-reward"
+            value="black"
           >
             Select Reward
           </button>
         </div>
-        <div class="product-info mahogany">
+        <div class="product-info">
           <h3>Mahogany Special Edition</h3>
           <p class="pledge-amount">Pledge $200 or more</p>
           <p class="description-text">
@@ -252,7 +265,8 @@
           </div>
           <button
             type="button"
-            class="select-reward mahogany-button open-modal-button"
+            class="open-modal select-reward"
+            value="mahogany"
           >
             Select Reward
           </button>
