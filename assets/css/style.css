@@ -25,15 +25,38 @@ body {
   flex-direction: column;
 }
 
+div, ul {
+  border-radius: 8px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
 button {
   font-family: "Commissioner", sans-serif;
+  background: #3cb3ab;
+  color: #ffffff;
+  border-radius: 33.5px;
+  border:none;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+p {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  line-height: 24px;
+}
+
+.main-container {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
 }
 
 .modal {
   position: absolute;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.0497193);
-  border-radius: 8px;
   top: 121px;
   margin: 0 6%;
   width: 88%;
@@ -45,8 +68,6 @@ button {
 }
 
 .modal-default {
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -62,8 +83,6 @@ button {
 }
 
 .thank-you-message {
-  display: flex;
-  flex-direction: column;
   gap: 1.5rem;
   align-items: center;
   text-align: center;
@@ -77,40 +96,20 @@ button {
 
 .thank-you-message button {
   margin-top: 0.5rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #ffffff;
-  background: #3cb3ab;
-  border-radius: 33.5px;
-  border:none;
   padding:1rem 2rem;
 }
 
 .product-info-modal {
   border: 2px solid rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
   padding-top: 0.5rem;
 }
 
 .product-selected {
   border: 2px solid #3cb3ab;
-  border-radius: 8px;
-}
-
-.description-text {
-  font-size: 0.9rem;
-  line-height: 24px;
-  color: #7a7a7a;
 }
 
 .product-info-modal .description-text {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.product-info-modal .description-text {
-  margin-top: 1.8rem;
-  margin-bottom: 1.5rem;
+  margin: 1.8rem 1.5rem 1.5rem 1.5rem;
 }
 
 input[type="radio"] {
@@ -165,8 +164,6 @@ span {
 }
 
 .pledge-input-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 1.1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
@@ -181,7 +178,7 @@ span {
 }
 
 .pledge-input-container > div {
-  display: flex;
+  flex-direction: row;
   gap: 1rem;
   justify-content: center;
 }
@@ -190,7 +187,6 @@ span {
   font-weight: 700;
   font-size: 0.9rem;
   line-height: 17px;
-  display: flex;
   align-items: center;
   color: #000000;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -204,16 +200,6 @@ span {
 }
 
 .continue-button {
-  font-weight: 700;
-  font-size: 0.9rem;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  background: #3cb3ab;
-  border-radius: 33.5px;
-  border: none;
   padding: 1rem 1.6rem;
 }
 
@@ -233,7 +219,7 @@ span {
   background: #000000;
   opacity: 0.5;
   display: block;
-  z-index: 3;
+  z-index: 4;
 }
 
 .background-gradient {
@@ -267,15 +253,15 @@ nav {
   align-items: center;
 }
 
-nav button {
+.menu-button {
   width: 16px;
   height: 15px;
-  border: none;
   display: flex;
   background-image: url("../images/icon-hamburger.svg");
   background-color: transparent;
   background-repeat: no-repeat;
-  z-index: 4;
+  z-index: 3;
+  border-radius: 0;
 }
 
 .close-menu {
@@ -284,9 +270,6 @@ nav button {
 
 ul {
   list-style-type: none;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.0497193);
-  border-radius: 8px;
   opacity: 0;
   transition: all 0.5s;
 }
@@ -316,11 +299,6 @@ main {
 }
 
 main > div {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.0497193);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 2rem 1.5rem 2.5rem 1.5rem;
@@ -342,9 +320,7 @@ main > div {
 }
 
 .title-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 h1 {
@@ -357,27 +333,19 @@ h1 {
 }
 
 .title-buttons-container {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
 }
 
 .back-project-button {
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "Commissioner", sans-serif;
-  background: #3cb3ab;
-  border-radius: 33.5px;
-  border: none;
+  font-size: 1rem;
   padding: 1.1rem 2.6rem;
   z-index: 2;
 }
 
 .bookmark-button {
-  border: none;
   background: none;
 }
 
@@ -387,8 +355,6 @@ h1 {
 }
 
 .stats-text {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -405,26 +371,26 @@ hr {
 .stats-large {
   font-weight: 700;
   font-size: 2rem;
+  color:#000000;
 }
 
 .stats-small {
-  color: #7a7a7a;
-  font-size: 0.9rem;
   margin-top: 0.5rem;
 }
 
-.progress-bar-total {
+.progress-bar {
   height: 0.8rem;
+  border-radius: 33.5px;
+}
+
+.progress-bar-total {
   width: 100%;
   background: rgba(47, 47, 47, 0.05);
   mix-blend-mode: normal;
-  border-radius: 33.5px;
 }
 
 .progress-bar-completed {
   background: #3cb3ab;
-  height: 0.8rem;
-  border-radius: 33.5px;
 }
 
 .product-info-container {
@@ -443,7 +409,6 @@ h2 {
 
 main .product-info {
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
   padding: 1.5rem;
 }
 
@@ -458,41 +423,27 @@ h3 {
 .pledge-amount {
   color: #3cb3ab;
   font-weight: 500;
-  font-size: 0.9rem;
   margin-top: 0.5rem;
 }
 
-.product-info-text {
-  font-size: 0.9rem;
-  line-height: 24px;
-  color: #7a7a7a;
+.product-info .description-text {
   margin: 1.5rem 0;
 }
 
 .number-remaining-container {
-  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-}
-
-.left {
-  color: #7a7a7a;
-  font-size: 0.9rem;
 }
 
 .number-remaining {
   font-weight: 700;
   font-size: 2rem;
   color: #000000;
+  align-self: flex-start;
 }
 
 .select-reward {
-  color: #ffffff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  border: none;
-  background: #3cb3ab;
-  border-radius: 33.5px;
   padding: 1.1rem 2rem;
   margin-top: 1.5rem;
   z-index: 2;
