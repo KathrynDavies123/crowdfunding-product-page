@@ -19,14 +19,15 @@ html {
   }
 }
 
-body {
+body,
+main {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-div, ul {
-  border-radius: 8px;
+main {
+  align-items: center;
 }
 
 div {
@@ -34,12 +35,17 @@ div {
   flex-direction: column;
 }
 
+div,
+ul {
+  border-radius: 8px;
+}
+
 button {
   font-family: "Commissioner", sans-serif;
   background: #3cb3ab;
   color: #ffffff;
   border-radius: 33.5px;
-  border:none;
+  border: none;
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -86,7 +92,7 @@ p {
   gap: 1.5rem;
   align-items: center;
   text-align: center;
-  display:none;
+  display: none;
 }
 
 .thank-you-message img {
@@ -96,7 +102,7 @@ p {
 
 .thank-you-message button {
   margin-top: 0.5rem;
-  padding:1rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .product-info-modal {
@@ -236,7 +242,7 @@ header {
       rgba(0, 0, 0, 0.0001) 100%
     ),
     url("../images/image-hero-mobile.jpg");
-  background-size: 100% 128px, 100% 100%;
+  background-size: 100% 128px, cover;
   background-repeat: no-repeat, no-repeat;
   background-position: top, top;
   padding: 2rem 1.5rem 0 1.5rem;
@@ -362,16 +368,10 @@ h1 {
   padding: 1.5rem;
 }
 
-hr {
-  width: 5rem;
-  color: #000000;
-  opacity: 0.2;
-}
-
 .stats-large {
   font-weight: 700;
   font-size: 2rem;
-  color:#000000;
+  color: #000000;
 }
 
 .stats-small {
@@ -453,4 +453,61 @@ h3 {
   background: #2f2f2f;
   mix-blend-mode: normal;
   opacity: 0.5;
+}
+
+@media (min-width: 650px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    height:400px;
+  }
+
+  .nav-bar {
+    align-items: flex-start;
+  }
+  header .main-container {
+    background: none;
+    color: #ffffff;
+    display:flex;
+    opacity: 1;
+    border: none;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .menu-button {
+    display: none;
+  }
+  li {
+    border: none;
+    padding-top:0;
+  }
+  .main-container {
+    width: 455px;
+  }
+  .stats-text {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media(min-width:750px) {
+  header {
+    background-image: linear-gradient(
+      180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.0001) 100%
+    ),
+    url("../images/image-hero-desktop.jpg");
+  }
+  .title-container {
+    margin-top:-20%;
+  }
+  .main-container {
+    width: 730px;
+  }
+  .modal {
+    left: 0;
+right: 0;
+margin: auto
+  }
 }
